@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A9B388;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 80vh;
+        }
+
+        title {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 2px;
+            width: 300px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #FEFAE0;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #5F6F52;
+            color: #FEFAE0;
+            font-size: 20px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            background-color: #5F6F52;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            color: #FEFAE0;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #FEFAE0;
+            color: #B99470;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #B99470;
+            color: #FEFAE0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sales Predictor</h1>
+    </header>
+    <!-- <br>
+    <br> -->
+    <form method="post" action="/predict">
+        <label for="TV">TV spend</label>
+        <input type="text" id="TV" name="TV" required>
+
+        <label for="Radio">Radio spend</label>
+        <input type="text" id="Radio" name="Radio" required>
+
+        <label for="Newspaper">Newspaper spend</label>
+        <input type="text" id="Newspaper" name="Newspaper" required>
+
+        <button type="submit">Projected Sales</button>
+
+    </form>
+
+    {% if result %}
+        <p>Total expected sales:<br>{{ result }}</p>
+    {% endif %}
+    <br>
+    <f>
+        <a href="http://127.0.0.1:5000/">
+            <button type="button">Reset</button>
+        </a>
+    </f>
+
+</body>
+</html>
